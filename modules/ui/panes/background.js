@@ -16,8 +16,8 @@ export function uiPaneBackground(context) {
         .iconName('iD-icon-layers')
         .sections([
             uiSectionBackgroundList(context),
-            uiSectionOverlayList(context),
             uiSectionImageOverlay(context),
+            uiSectionOverlayList(context),
             uiSectionBackgroundDisplayOptions(context),
             uiSectionBackgroundOffset(context)
         ]);
