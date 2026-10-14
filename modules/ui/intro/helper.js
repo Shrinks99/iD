@@ -143,6 +143,9 @@ export function helpHtml(id, replacements) {
         turn_restrictions: localizer.t_html('_tagging.presets.fields.restrictions.label'),
         background_settings: localizer.t_html('background.description'),
         imagery_offset: localizer.t_html('background.fix_misalignment'),
+        image_overlay: localizer.t_html('background.image_overlay.title'),
+        align_image: localizer.t_html('background.image_overlay.align'),
+        done: localizer.t_html('background.image_overlay.done'),
         start_the_walkthrough: localizer.t_html('splash.walkthrough'),
         help: localizer.t_html('help.title'),
         ok: localizer.t_html('intro.ok')

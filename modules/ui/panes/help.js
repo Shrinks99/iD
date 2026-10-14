@@ -180,7 +180,10 @@ export function uiPaneHelp(context) {
             'sources',
             'offsets_h',
             'offset',
-            'offset_change'
+            'offset_change',
+            'image_overlay_h',
+            'image_overlay',
+            'image_overlay_align'
         ]],
         ['streetlevel', [
             'intro',
@@ -226,6 +229,7 @@ export function uiPaneHelp(context) {
         'help.help.before_start_h': 3,
         'help.help.open_data_h': 3,
         'help.help.open_source_h': 3,
+        'help.imagery.image_overlay_h': 3,
         'help.imagery.offsets_h': 3,
         'help.imagery.sources_h': 3,
         'help.lines.add_line_h': 3,

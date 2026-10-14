@@ -37,6 +37,9 @@ _Breaking developer changes, which may affect downstream projects or sites that 
 
 # Unreleased (2.43.0-dev)
 
+#### :tada: New Features
+* Add a local image (e.g. a scanned site plan) as a custom imagery overlay: align it on the map with move, scale, rotate, and perspective (corner) handles, adjust its opacity, and export/import its position
+
 #### :sparkles: Usability & Accessibility
 * Increase the colour contrast of the blue text used for links and preset fields ([#12724], thanks [@k-yle])
 * Render diameter and radius tags when a node is selected ([#9732], thanks [@k-yle])

@@ -1460,6 +1460,9 @@ en:
       offsets_h: "Adjusting Imagery Offset"
       offset: "Imagery is sometimes offset slightly from accurate map data. If you see a lot of roads or buildings shifted from the background imagery, it may be the imagery that's incorrect, so don't move them all to match the background. Instead, you can adjust the background so that it matches the existing data by expanding the \"{imagery_offset}\" section at the bottom of the Background Settings pane."
       offset_change: "Press the small triangle buttons to adjust the imagery offset in small steps, or hold the {leftclick} left mouse button and drag within the gray square to slide the imagery into alignment."
+      image_overlay_h: "Using Your Own Images"
+      image_overlay: "If you have an image which isn't available as a background, such as a scanned site plan or a photo of a map, you can add it in the \"{image_overlay}\" section of the Background Settings pane. The image is shown above the background imagery and stays on your device. Only use images which you are allowed to use for mapping in OpenStreetMap."
+      image_overlay_align: "Press **{align_image}** and drag the image to move it, drag its corners to warp it, drag the edges to stretch it, or drag the round handle above it to rotate it. Hold `⇧ Shift` to keep the shape of the image while dragging a corner, or to rotate in steps of 15°. Press **{done}** or `↵ Enter` to keep the new position, or `⎋ Esc` to cancel. Use the opacity slider to compare the image with the background imagery, and export its position to restore it in a later session."
     streetlevel:
       title: Street Level Photos
       intro: "Street level photos are useful for mapping traffic signs, businesses, and other details that you can't see from satellite and aerial images. The iD editor supports street level photos from a variety of different providers, such as [Panoramax](https://panoramax.fr), [Mapillary](https://www.mapillary.com), or [KartaView](https://kartaview.org)."
@@ -2289,6 +2292,15 @@ en:
         reflect_long: "Flip features across the longer axis"
         reflect_short: "Flip features across the shorter axis"
         delete: "Delete selected features"
+      align_image:
+        title: "Aligning a custom image"
+        nudge: "Move the image"
+        nudge_more: "Move the image by a lot"
+        scale: "Scale the image"
+        rotate: "Rotate the image"
+        rotate_more: "Rotate the image by 15°"
+        finish: "Finish aligning"
+        cancel: "Cancel aligning"
       commands:
         title: "Commands"
         copy: "Copy selected features"

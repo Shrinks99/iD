@@ -247,6 +247,46 @@
             "modifiers": ["⌘"],
             "shortcuts": ["S"],
             "text": "shortcuts.editing.commands.save"
+          },
+          {
+            "section": "align_image",
+            "text": "shortcuts.editing.align_image.title"
+          },
+          {
+            "modifiers": ["⇧"],
+            "shortcuts": ["↓", "↑", "←", "→"],
+            "text": "shortcuts.editing.align_image.nudge",
+            "separator": ","
+          },
+          {
+            "modifiers": ["⌥", "⇧"],
+            "shortcuts": ["↓", "↑", "←", "→"],
+            "text": "shortcuts.editing.align_image.nudge_more",
+            "separator": ","
+          },
+          {
+            "modifiers": ["⇧"],
+            "shortcuts": ["+", "-"],
+            "text": "shortcuts.editing.align_image.scale",
+            "separator": ","
+          },
+          {
+            "shortcuts": ["[", "]"],
+            "text": "shortcuts.editing.align_image.rotate",
+            "separator": ","
+          },
+          {
+            "shortcuts": ["{", "}"],
+            "text": "shortcuts.editing.align_image.rotate_more",
+            "separator": ","
+          },
+          {
+            "shortcuts": ["↵"],
+            "text": "shortcuts.editing.align_image.finish"
+          },
+          {
+            "shortcuts": ["⎋"],
+            "text": "shortcuts.editing.align_image.cancel"
           }
         ]
       },
