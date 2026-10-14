@@ -18,6 +18,7 @@ import { svgPanoramaxImages } from './panoramax_images';
 import { svgOsm } from './osm';
 import { svgNotes } from './notes';
 import { svgTouch } from './touch';
+import { svgImageOverlayHandles } from './image_overlay_handles';
 import { utilArrayDifference, utilRebind } from '../util';
 import { utilGetDimensions, utilSetDimensions } from '../util/dimensions';
 import type { Projection } from '../geo/raw_mercator';
@@ -60,6 +61,8 @@ export function svgLayers(projection: Projection, context: iD.Context) {
         { id: 'debug', layer: svgDebug(projection, context) },
         { id: 'geolocate', layer: svgGeolocate(projection) },
         { id: 'touch', layer: svgTouch() },
+        // after `touch`, so that the handles are above all other targets
+        { id: 'image-overlay', layer: svgImageOverlayHandles(context) },
     ];
 
 

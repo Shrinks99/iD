@@ -469,3 +469,55 @@ g.auxiliary path.preview {
 .highlight-edited path.area.shadow.geometry-edited {
     stroke: rgb(255, 126, 46);
 }
+
+
+/* Handles for aligning a custom image */
+.layer-image-overlay-handles .image-overlay-body {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 2;
+    stroke-dasharray: 6, 4;
+    pointer-events: all;
+    cursor: move;
+}
+.ideditor[pointer='touch'] .layer-image-overlay-handles .image-overlay-body {
+    pointer-events: stroke;
+}
+.layer-image-overlay-handles .image-overlay-rotate-stalk {
+    stroke: #fff;
+    stroke-width: 2;
+    pointer-events: none;
+}
+.layer-image-overlay-handles .image-overlay-handle {
+    cursor: crosshair;
+}
+.layer-image-overlay-handles .image-overlay-handle-center {
+    cursor: move;
+}
+.layer-image-overlay-handles .image-overlay-handle-rotate {
+    cursor: grab;
+}
+.align-image-dragging .layer-image-overlay-handles .image-overlay-handle-rotate {
+    cursor: grabbing;
+}
+.layer-image-overlay-handles .handle-target {
+    fill: transparent;
+    pointer-events: all;
+}
+.ideditor[pointer='touch'] .layer-image-overlay-handles .handle-target {
+    r: 22px;
+}
+.layer-image-overlay-handles .handle-dot {
+    fill: #fff;
+    stroke: #333;
+    stroke-width: 1.5;
+    pointer-events: none;
+}
+.layer-image-overlay-handles .image-overlay-handle-rotate .handle-dot,
+.layer-image-overlay-handles .image-overlay-handle-center .handle-dot {
+    fill: #7092ff;
+    stroke: #fff;
+}
+.layer-image-overlay-handles .image-overlay-handle:hover .handle-dot {
+    fill: #ffff8f;
+}

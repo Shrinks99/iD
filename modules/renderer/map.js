@@ -421,7 +421,8 @@ export function rendererMap(context) {
             'save': true,
             'select-note': true,
             'select-data': true,
-            'select-error': true
+            'select-error': true,
+            'align-image': true
         };
 
         var mode = context.mode();
