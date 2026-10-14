@@ -27,6 +27,13 @@ export { geoPolygonContainsPolygon } from './geom.js';
 export { geoPolygonIntersectsPolygon } from './geom.js';
 export { geoViewportEdge } from './geom.js';
 
+export { geoHomography } from './homography.js';
+export { geoHomographyApply } from './homography.js';
+export { geoHomographyInvert } from './homography.js';
+export { geoHomographySquareToQuad } from './homography.js';
+export { geoHomographyToCssMatrix3d } from './homography.js';
+export { geoQuadIsValid } from './homography.js';
+
 export { geoRawMercator } from './raw_mercator.js';
 
 export { geoVecAdd } from './vector.js';
