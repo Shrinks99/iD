@@ -71,7 +71,6 @@ export function uiSectionImageOverlay(context: iD.Context) {
             .then(text => {
                 if (isAligning()) browse();
                 const warnings = overlay.applyGeoreference(JSON.parse(text));
-                overlay.zoomTo();
                 if (warnings.length) {
                     setMessage({
                         type: 'warning',
