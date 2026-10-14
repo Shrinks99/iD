@@ -5,6 +5,7 @@ export { uiSectionChanges } from './changes';
 export { uiSectionDataLayers } from './data_layers';
 export { uiSectionEntityIssues } from './entity_issues';
 export { uiSectionFeatureType } from './feature_type';
+export { uiSectionImageOverlay } from './image_overlay';
 export { uiSectionMapFeatures } from './map_features';
 export { uiSectionMapStyleOptions } from './map_style_options';
 export { uiSectionOverlayList } from './overlay_list';

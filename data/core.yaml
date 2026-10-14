@@ -854,6 +854,32 @@ en:
       left: "nudge left"
       right: "nudge right"
       bottom: "nudge bottom"
+    image_overlay:
+      title: Custom Image
+      add: "Choose an image, or drop it here"
+      loading: "Loading image…"
+      license: "The image stays on your device. Only use images which you are allowed to use for mapping in OpenStreetMap."
+      enable_tooltip: Show or hide the image.
+      zoom: Zoom to image
+      remove: Remove image
+      opacity: Opacity
+      align: Align Image
+      align_tooltip: "Drag the image and its handles on the map to move, scale, rotate, or warp it."
+      done: Done
+      cancel: Cancel
+      reset: Reset
+      reset_tooltip: Place the image in the middle of the map again.
+      export: Export Position
+      export_tooltip: Save the position of the image to a file, to restore it later.
+      import: Import Position
+      import_tooltip: Restore the position of the image from a file saved earlier.
+      errors:
+        type: "This file type is not supported. Choose a PNG, JPEG, or WebP image."
+        load: The image could not be opened.
+        georeference: This file does not contain a valid image position.
+      warnings:
+        filename: This position was saved for a different file.
+        aspect: "This position was saved for an image with a different aspect ratio, so the image may look distorted."
   map_data:
     title: Map Data
     description: Map Data
