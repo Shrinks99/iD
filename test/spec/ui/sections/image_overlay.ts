@@ -42,6 +42,10 @@ describe('iD.uiSectionImageOverlay', () => {
     it('offers to add an image when there is none', () => {
         expect(selection.selectAll('.image-overlay-dropzone').size()).toBe(1);
         expect(selection.selectAll('.image-overlay-loaded').size()).toBe(0);
+
+        const link = selection.select('.image-overlay-info a');
+        expect(link.attr('href')).toBe('https://osmfoundation.org/wiki/Licence/Licence_Compatibility');
+        expect(link.attr('target')).toBe('_blank');
     });
 
     it('rejects unsupported file types', () => {

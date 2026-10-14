@@ -4270,6 +4270,10 @@ li.issue-fix-item button:not(.actionable) .fix-icon {
     color: var(--muted-text-color);
     font-size: 12px;
 }
+.image-overlay-license-link {
+    display: block;
+    margin-top: 5px;
+}
 .image-overlay-name {
     text-overflow: ellipsis;
     white-space: nowrap;

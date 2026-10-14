@@ -199,10 +199,19 @@ export function uiSectionImageOverlay(context: iD.Context) {
             .append('span')
             .attr('class', 'image-overlay-dropzone-text');
 
-        emptyEnter
+        const licenseEnter = emptyEnter
             .append('p')
             .attr('class', 'image-overlay-info')
             .call(t.append('background.image_overlay.license'));
+
+        licenseEnter
+            .append('a')
+            .attr('class', 'image-overlay-license-link')
+            .attr('target', '_blank')
+            .attr('href', 'https://osmfoundation.org/wiki/Licence/Licence_Compatibility')
+            .call(svgIcon('#iD-icon-out-link', 'inline'))
+            .append('span')
+            .call(t.append('background.image_overlay.license_link'));
 
         selection.selectAll('.image-overlay-dropzone')
             .property('disabled', _isLoading)

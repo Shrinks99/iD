@@ -858,7 +858,8 @@ en:
       title: Custom Image
       add: "Choose an image, or drop it here"
       loading: "Loading image…"
-      license: "The image stays on your device. Only use images which you are allowed to use for mapping in OpenStreetMap."
+      license: "Only use with compatibly licensed images."
+      license_link: Learn more about license compatibility
       enable_tooltip: Show or hide the image.
       zoom: Zoom to image
       remove: Remove image
