@@ -4649,8 +4649,24 @@ img.tile-debug {
 .layer-overlay {
     z-index: 2;
 }
+.layer-image-overlay {
+    z-index: 2;
+    pointer-events: none;
+}
 .layer-data {
     z-index: 3;
+}
+
+.layer-image-overlay img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: none;
+    transform-origin: 0 0;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    will-change: transform;
 }
 
 /* Map-In-Map

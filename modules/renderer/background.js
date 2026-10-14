@@ -10,6 +10,7 @@ import { prefs } from '../core/preferences';
 import { fileFetcher } from '../core/file_fetcher';
 import { geoMetersToOffset, geoOffsetToMeters, geoExtent } from '../geo';
 import { rendererBackgroundSource } from './background_source';
+import { rendererImageOverlay } from './image_overlay';
 import { rendererTileLayer } from './tile_layer';
 import { utilAesDecrypt, utilStringQs } from '../util';
 import { utilRebind } from '../util/rebind';
@@ -21,6 +22,7 @@ let _imageryIndex = null;
 export function rendererBackground(context) {
   const dispatch = d3_dispatch('change');
   const baseLayer = rendererTileLayer(context).projection(context.projection);
+  const imageOverlay = rendererImageOverlay(context);
   let _checkedBlocklists = [];
   let _isValid = true;
   let _overlayLayers = [];
@@ -28,6 +30,11 @@ export function rendererBackground(context) {
   let _contrast = 1;
   let _saturation = 1;
   let _sharpness = 1;
+
+  imageOverlay.on('change.background', () => {
+    dispatch.call('change');
+    background.updateImagery();
+  });
 
 
   function ensureImageryIndex() {
@@ -189,6 +196,10 @@ export function rendererBackground(context) {
       .attr('class', 'layer layer-overlay')
       .merge(overlays)
       .each((layer, i, nodes) => d3_select(nodes[i]).call(layer));
+
+    // Appended after the tile overlays (instead of being inserted before `.layer-data`),
+    // so that it stays above overlays which are enabled later.
+    imageOverlay.render(selection);
   }
 
 
@@ -229,6 +240,10 @@ export function rendererBackground(context) {
     _overlayLayers
       .filter(d => !d.source().isLocatorOverlay() && !d.source().isHidden())
       .forEach(d => imageryUsed.push(d.source().imageryUsed()));
+
+    if (imageOverlay.hasImage() && imageOverlay.enabled()) {
+      imageryUsed.push(imageOverlay.imageryUsed());
+    }
 
     const dataLayer = context.layers().layer('data');
     if (dataLayer && dataLayer.enabled() && dataLayer.hasData()) {
@@ -289,6 +304,9 @@ export function rendererBackground(context) {
       return visible[source.id];                                 // include imagery visible in given extent
     });
   };
+
+
+  background.imageOverlay = () => imageOverlay;
 
 
   background.dimensions = (val) => {
